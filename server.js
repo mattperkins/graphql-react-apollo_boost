@@ -7,6 +7,20 @@ require('dotenv').config({ path: 'variables.env' })
 const Software = require('./models/Software')
 const User = require('./models/User')
 
+// GraphQL middleware
+const { graphiqlExpress, graphqlExpress } = require('apollo-server-express')
+const { makeExecutableSchema } = require('graphql-tools')
+
+
+const { typeDefs } = require('./schema')
+const { resolvers } = require('./resolvers')
+
+// Create GraphQL schema
+const schema = makeExecutableSchema({
+    typeDefs: typeDefs,
+    resolvers: resolvers
+})
+
 // Connect to db
 mongoose
     .connect(process.env.MONGO_URI, { useNewUrlParser: true })
@@ -16,6 +30,22 @@ mongoose
 
 // Initialise application
 const app = express()
+
+// Create GraphiQL application (in browser)
+
+app.use('/graphiql', graphiqlExpress({
+    endpointURL: '/graphql'
+}))
+
+// Add Mongoose models to GraphQL 
+// which binds or connects Schemas to GraphQL
+app.use('/graphql', graphqlExpress({
+    schema,
+    context: {
+        Software,
+        User
+    }
+}))
 
 const PORT = process.env.PORT || 4444
 
