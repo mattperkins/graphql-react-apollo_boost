@@ -4,13 +4,13 @@ exports.resolvers = {
     },
     Mutation: {
         addSoftware: async (root,
-            { name, description, category, instructions, username },
+            { name, description, paradigm, discipline, username },
             { Software }) => {
             const newSoftware = await new Software({
                 name,
                 description,
-                category,
-                instructions,
+                paradigm,
+                discipline,
                 username
             }).save()
             return newSoftware

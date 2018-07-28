@@ -7,15 +7,15 @@ const SoftwareSchema = new Schema({
         type: String,
         required: true
     },
-    category: {
-        type: String,
-        required: true
-    },
     description: {
         type: String,
         required: true
     },
-    instructions: {
+    paradigm: {
+        type: String,
+        required: true
+    },
+    discipline: {
         type: String,
         required: true
     },

@@ -4,9 +4,9 @@
 exports.typeDefs = `
     type Software {
         name: String!
-        category: String!
         description: String!
-        instructions: String!
+        paradigm: String!
+        discipline: String!
         createdDate: String
         likes: Int
         uername: String
@@ -27,8 +27,8 @@ exports.typeDefs = `
         addSoftware(
             name: String!,
             description: String!,
-            category: String!,
-            instructions: String!,
+            paradigm: String!,
+            discipline: String!,
             username: String
         ): Software
     }
