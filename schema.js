@@ -22,4 +22,15 @@ exports.typeDefs = `
     type Query {
         getAllSoftware: [Software]
     }
+
+    type Mutation {
+        addSoftware(
+            name: String!,
+            description: String!,
+            category: String!,
+            instructions: String!,
+            username: String
+        ): Software
+    }
+
  `
