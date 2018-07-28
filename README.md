@@ -1,3 +1,7 @@
+# RUN
+## yarn run server
+## yarn start
+
 # ENDPOINTS
 ## http://localhost:4444/graphiql
 ## http://localhost:3000
