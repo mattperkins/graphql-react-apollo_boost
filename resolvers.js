@@ -1,6 +1,13 @@
 exports.resolvers = {
     Query: {
-        getAllSoftware: () => { }
+        getAllSoftware: async (root,
+            args,
+            { Software }) => {
+            // const allSoftware = await Software.find()
+            // return allSoftware
+            // shorthand =
+            return await Software.find()
+        }
     },
     Mutation: {
         addSoftware: async (root,

@@ -1,6 +1,22 @@
 # ENDPOINTS
 ## http://localhost:4444/graphiql
 
+# Query schema structure
+```
+query {
+  getAllSoftware {
+    _id
+    name
+    description
+    paradigm
+    discipline
+    createdDate
+    likes
+    username
+  }
+}
+```
+
 # Mutation schema structure
 ```
 mutation{
