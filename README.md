@@ -10,7 +10,7 @@ query {
     description
     paradigm
     discipline
-    createdDate
+    dateCreated
     likes
     username
   }

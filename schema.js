@@ -8,7 +8,7 @@ exports.typeDefs = `
         description: String!
         paradigm: String!
         discipline: String!
-        createdDate: String
+        dateCreated: String
         likes: Int
         username: String
     }

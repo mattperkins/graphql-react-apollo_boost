@@ -19,7 +19,7 @@ const SoftwareSchema = new Schema({
         type: String,
         required: true
     },
-    creationDate: {
+    dateCreated: {
         type: Date,
         default: Date.now
     },
