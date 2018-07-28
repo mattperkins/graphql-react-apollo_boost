@@ -17,4 +17,8 @@ exports.typeDefs = `
         joinDate: String
         favourites: [Software]
     }
+
+    type Query {
+        getAllSoftware: [Software]
+    }
  `
