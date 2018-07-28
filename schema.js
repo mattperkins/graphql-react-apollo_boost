@@ -1,3 +1,4 @@
+// GraphQL Schema 
 // GQL refers to schemas as typeDefs
 // models === types (converted to GQL syntax)
 exports.typeDefs = `
