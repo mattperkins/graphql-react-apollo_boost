@@ -3,15 +3,17 @@
 // models === types (converted to GQL syntax)
 exports.typeDefs = `
     type Software {
+        _id: ID
         name: String!
         description: String!
         paradigm: String!
         discipline: String!
         createdDate: String
         likes: Int
-        uername: String
+        username: String
     }
     type User {
+        _id: ID
         username: String! @unique
         password: String!
         email: String!
