@@ -1,5 +1,6 @@
 # ENDPOINTS
 ## http://localhost:4444/graphiql
+## http://localhost:3000
 
 # Query schema structure
 ```
