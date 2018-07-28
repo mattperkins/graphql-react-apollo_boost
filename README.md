@@ -1,4 +1,5 @@
 # RUN
+## yarn run dev (concurrently script)
 ## yarn run server
 ## yarn start
 
