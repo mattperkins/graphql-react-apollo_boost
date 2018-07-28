@@ -27,7 +27,7 @@ mutation{
   username: "Fred"){
     name
     description
-  	paradigm
+    paradigm
     discipline
     uername
   }
