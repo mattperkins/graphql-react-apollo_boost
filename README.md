@@ -25,7 +25,7 @@ query {
 
 # Mutation schema structure
 ```
-mutation{
+mutation {
   addSoftware(name: "Python",
   description: "An interpreted high-level programming language for general-purpose programming",
   paradigm: "Object Orientated",
@@ -36,6 +36,15 @@ mutation{
     paradigm
     discipline
     uername
+  }
+}
+```
+```
+mutation {
+  signupUser(username: "Sandy", 
+    email: "sandy@email.com", 
+    password: "test1234") {
+    token
   }
 }
 ```

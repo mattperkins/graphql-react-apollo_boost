@@ -25,6 +25,10 @@ exports.typeDefs = `
         getAllSoftware: [Software]
     }
 
+    type Token {
+        token: String!
+    }
+
     type Mutation {
         addSoftware(
             name: String!,
@@ -33,6 +37,12 @@ exports.typeDefs = `
             discipline: String!,
             username: String
         ): Software
+
+        signupUser(
+            username: String!,
+            email: String!,
+            password: String!
+        ): Token
     }
 
  `

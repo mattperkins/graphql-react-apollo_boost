@@ -1,3 +1,15 @@
+const jwt = require('jsonwebtoken')
+
+const createToken = (user, secret, expiresIn) => {
+    const { username, email } = user
+    return jwt.sign({
+        username,
+        email,
+    }, secret, {
+            expiresIn
+        })
+}
+
 exports.resolvers = {
     Query: {
         getAllSoftware: async (root,
@@ -21,6 +33,27 @@ exports.resolvers = {
                 username
             }).save()
             return newSoftware
+        },
+
+        signupUser: async (root,
+            {
+                username,
+                email,
+                password },
+            // context = User model
+            { User }) => {
+            const user = await User.findOne({
+                username: username
+            })
+            if (user) {
+                throw new Error('User already exists')
+            }
+            const newUser = await new User({
+                username,
+                email,
+                password
+            }).save()
+            return { token: createToken(newUser, process.env.SECRET, '1hr') }
         }
-    }
-}
+    } // end Mutation
+} // end resolvers
