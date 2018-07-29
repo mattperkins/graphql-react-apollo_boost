@@ -23,6 +23,7 @@ exports.typeDefs = `
 
  type Query {
      getAllSoftware: [Software]
+     getCurrentUser: User
  }
 
  type Token {
