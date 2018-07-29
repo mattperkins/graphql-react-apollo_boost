@@ -43,10 +43,10 @@ const client = new ApolloClient({
  }
 })
 
-const Root = ({ refetch }) => (
+const Root = ({ refetch, session }) => (
  <Router>
   <Fragment>
-   <Navbar /> {/* placed here to make it available on all routes */}
+   <Navbar session={session} /> {/* placed here to make it available on all routes */}
    <Switch>
     <Route
      path="/"
