@@ -3,7 +3,31 @@ import React from 'react'
 class Signup extends React.Component {
     render() {
         return (
-            <div>SignUp</div>
+            <div className="center">
+                <h2 style={{ marginTop: 30, fontWeight: 900 }}>Signup</h2>
+                <form className="form">
+                    <input type="text"
+                        name="username"
+                        placeholder="Username"
+                    />
+                    <input type="email"
+                        name="email"
+                        placeholder="Email Address"
+                    />
+                    <input type="password"
+                        name="password"
+                        placeholder="Password"
+                    />
+                    <input type="password"
+                        name="passwordConfirmation"
+                        placeholder="Confirm Password"
+                    />
+                    <button
+                        type="submit"
+                        className="button-primary"
+                    >Submit</button>
+                </form>
+            </div>
         )
     }
 }

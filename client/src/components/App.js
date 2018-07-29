@@ -2,7 +2,7 @@ import React from 'react'
 import { Query } from 'react-apollo'
 import { GET_ALL_SOFTWARE } from '../queries'
 const App = () => (
-  <div>
+  <div className="center">
     <h1>Home</h1>
     {/* // Query props */}
     <Query query={GET_ALL_SOFTWARE}>
