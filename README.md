@@ -39,6 +39,7 @@ mutation {
   }
 }
 ```
+
 ```
 mutation {
   signupUser(username: "Sandy", 
@@ -48,6 +49,26 @@ mutation {
   }
 }
 ```
+
+```
+mutation(
+  $username: String!, 
+  $password: String!) {
+  signinUser(
+    username: $username, 
+    password: $password) {
+    token
+  }
+}
+```
+Query Variables (add to graphiql bottom left tab)
+```
+{
+  "username": "Bob",
+  "password": "test1234"
+}
+```
+
 ```
 mutation(
   $username: String!, 
