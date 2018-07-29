@@ -5,9 +5,12 @@ import './index.css'
 import App from './components/App'
 import Navbar from './components/Navbar'
 import withSession from './components/withSession'
-import Search from './components/Software/Search'
+
 import Signin from './components/Auth/Signin'
 import Signup from './components/Auth/Signup'
+import Search from './components/Software/Search'
+import AddSoftware from './components/Software/AddSoftware'
+import Profile from './components/Profile/Profile'
 
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
@@ -61,6 +64,14 @@ const Root = ({ refetch }) => (
     <Route
      path="/signup"
      render={() => <Signup refetch={refetch} />}
+    />
+    <Route
+     path="/software/add"
+     component={AddSoftware}
+    />
+    <Route
+     path="/profile"
+     component={Profile}
     />
     <Redirect to="/" />
    </Switch>
