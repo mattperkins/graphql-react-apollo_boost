@@ -48,3 +48,24 @@ mutation {
   }
 }
 ```
+```
+mutation(
+  $username: String!, 
+  $email: String!, 
+  $password: String!) {
+  signupUser(
+    username: $username, 
+    email: $email, 
+    password: $password) {
+    token
+  }
+}
+```
+Query Variables (add to graphiql bottom left tab)
+```
+{
+  "username": "Bob",
+  "email": "Bob@email.com",
+  "password": "test1234"
+}
+```
