@@ -22,6 +22,18 @@ export const GET_ALL_SOFTWARE = gql`
 
 
 // User Mutations
+export const SIGNIN_USER = gql`
+ mutation(
+  $username: String!, 
+  $password: String!) {
+  signinUser(
+    username: $username, 
+    password: $password) {
+    token
+  }
+}
+`
+
 export const SIGNUP_USER = gql`
  mutation(
   $username: String!, 
