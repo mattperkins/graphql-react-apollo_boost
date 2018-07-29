@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 require('dotenv').config({ path: 'variables.env' })
 
@@ -30,6 +31,13 @@ mongoose
 
 // Initialise application
 const app = express()
+// specify the origin for the request
+const corsOptions = {
+    origin: "http://localhost:3000",
+    // required by Apollo Client
+    credentials: true
+}
+app.use(cors(corsOptions))
 
 // Create GraphiQL application (in browser)
 app.use(
