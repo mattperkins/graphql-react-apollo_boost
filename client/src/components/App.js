@@ -4,7 +4,6 @@ import { GET_ALL_SOFTWARE } from '../queries'
 
 const App = () => (
  <div className="center">
-  <h1>Home</h1>
   {/* // Query props */}
   <Query query={GET_ALL_SOFTWARE}>
    {/* // Render Props destructured  */}

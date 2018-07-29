@@ -9,6 +9,33 @@ body {
 .center {
   text-align: center;
 }
+/* Navbar */
+nav {
+  text-align: center;
+  padding-top: 18px;
+  background-color: #efefef;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+nav a,
+nav a:link {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.active {
+  font-weight: bold;
+}
+
+
 .form input,
       select,
       textarea {

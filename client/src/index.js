@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import './index.css'
 import App from './components/App'
+import Navbar from './components/Navbar'
+import withSession from './components/withSession'
+import Search from './components/Software/Search'
 import Signin from './components/Auth/Signin'
 import Signup from './components/Auth/Signup'
-import withSession from './components/withSession'
 
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
@@ -40,22 +42,29 @@ const client = new ApolloClient({
 
 const Root = ({ refetch }) => (
  <Router>
-  <Switch>
-   <Route
-    path="/"
-    exact
-    component={App}
-   />
-   <Route
-    path="/signin"
-    render={() => <Signin refetch={refetch} />}
-   />
-   <Route
-    path="/signup"
-    render={() => <Signup refetch={refetch} />}
-   />
-   <Redirect to="/" />
-  </Switch>
+  <Fragment>
+   <Navbar /> {/* placed here to make it available on all routes */}
+   <Switch>
+    <Route
+     path="/"
+     exact
+     component={App}
+    />
+    <Route
+     path="/search"
+     component={Search}
+    />
+    <Route
+     path="/signin"
+     render={() => <Signin refetch={refetch} />}
+    />
+    <Route
+     path="/signup"
+     render={() => <Signup refetch={refetch} />}
+    />
+    <Redirect to="/" />
+   </Switch>
+  </Fragment>
  </Router>
 )
 // HOC
