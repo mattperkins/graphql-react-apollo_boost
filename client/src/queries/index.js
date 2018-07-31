@@ -4,6 +4,7 @@ import { gql } from "apollo-boost"
 export const GET_ALL_SOFTWARE = gql`
     query {
         getAllSoftware {
+            _id
             name
             description
             paradigm
