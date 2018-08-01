@@ -21,6 +21,11 @@ exports.resolvers = {
    // shorthand =
    return await Software.find()
   },
+
+  getSoftware: async (root, { _id }, { Software }) => {
+   return await Software.findOne({ _id })
+  },
+
   getCurrentUser: async (root, args, { currentUser, User }) => {
    if (!currentUser) {
     return null

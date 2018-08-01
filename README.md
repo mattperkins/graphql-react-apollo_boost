@@ -23,6 +23,27 @@ query {
 }
 ```
 
+```
+query($_id: ID!) {
+  getSoftware(_id: $_id) {
+   	_id
+    name
+    description
+    paradigm
+    discipline
+    dateCreated
+    likes
+    username
+  }
+}
+```
+### Query Variables (add to graphiql bottom left tab)
+```
+{
+  "_id": "5b5c9011fed27b248e145f23" 
+}
+```
+
 # Mutation schema structure
 ```
 mutation {
@@ -61,7 +82,7 @@ mutation(
   }
 }
 ```
-Query Variables (add to graphiql bottom left tab)
+### Query Variables
 ```
 {
   "username": "Bob",
@@ -82,7 +103,7 @@ mutation(
   }
 }
 ```
-Query Variables (add to graphiql bottom left tab)
+### Query Variables (add to graphiql bottom left tab)
 ```
 {
   "username": "Bob",

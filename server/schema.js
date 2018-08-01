@@ -23,6 +23,7 @@ exports.typeDefs = `
 
  type Query {
      getAllSoftware: [Software]
+     getSoftware(_id: ID!): Software
      getCurrentUser: User
  }
 

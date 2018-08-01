@@ -16,6 +16,22 @@ export const GET_ALL_SOFTWARE = gql`
         }
     }
 `
+
+export const GET_SOFTWARE = gql`
+query($_id: ID!) {
+  getSoftware(_id: $_id) {
+   	_id
+    name
+    description
+    paradigm
+    discipline
+    dateCreated
+    likes
+    username
+  }
+}
+`
+
 // Software Mutations
 
 
