@@ -14,8 +14,18 @@ const SoftwarePage = ({ match }) => {
     if (error) return <div>Error!</div>
     console.log(data)
 
-
-    return <div>Software Page</div>
+    const { name, description, paradigm, discipline, dateCreated, likes, username } = data.getSoftware
+    return (
+     <div className="pad softwarePage">
+      <h3>{name}</h3>
+      <p>{description}</p>
+      <p><span>Paradigm:</span> {paradigm}</p>
+      <p><span>Discipline:</span> {discipline}</p>
+      <p><span>Date Created:</span> {dateCreated}</p>
+      <p><span># of Likes:</span> {likes}</p>
+      <p><span>Posted by:</span> {username}</p>
+     </div>
+    )
    }}
   </Query>
  )

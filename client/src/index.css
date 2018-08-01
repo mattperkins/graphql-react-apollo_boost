@@ -9,6 +9,9 @@ body {
 .center {
   text-align: center;
 }
+.pad {
+ padding: 0 40px 40px; 
+}
 /* Navbar */
 nav {
   text-align: center;
@@ -53,4 +56,7 @@ nav a:link {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.softwarePage span {
+ font-weight: bold;
 }

@@ -7,27 +7,21 @@ export const GET_ALL_SOFTWARE = gql`
             _id
             name
             description
-            paradigm
-            discipline
-            username
-            dateCreated
-            likes
-            username
         }
     }
 `
 
 export const GET_SOFTWARE = gql`
-query($_id: ID!) {
-  getSoftware(_id: $_id) {
-   	_id
-    name
-    description
-    paradigm
-    discipline
-    dateCreated
-    likes
-    username
+  query($_id: ID!) {
+     getSoftware(_id: $_id) {
+          _id
+          name
+          description
+          paradigm
+          discipline
+          dateCreated
+          likes
+          username
   }
 }
 `

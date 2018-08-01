@@ -68,7 +68,7 @@ exports.resolvers = {
 
   signupUser: async (root,
    { username, email, password },
-   // context = User model
+   // context = User (model)
    { User }) => {
    const user = await User.findOne({
     username: username
