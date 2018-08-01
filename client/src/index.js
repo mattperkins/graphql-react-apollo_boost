@@ -10,6 +10,7 @@ import Signin from './components/Auth/Signin'
 import Signup from './components/Auth/Signup'
 import Search from './components/Software/Search'
 import AddSoftware from './components/Software/AddSoftware'
+import SoftwarePage from './components/Software/SoftwarePage'
 import Profile from './components/Profile/Profile'
 
 import ApolloClient from 'apollo-boost'
@@ -68,6 +69,10 @@ const Root = ({ refetch, session }) => (
     <Route
      path="/software/add"
      component={AddSoftware}
+    />
+    <Route
+     path="/software/:_id"
+     component={SoftwarePage}
     />
     <Route
      path="/profile"

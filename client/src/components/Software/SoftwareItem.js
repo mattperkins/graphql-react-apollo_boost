@@ -1,7 +1,9 @@
 import React from 'react'
-const SoftwareItem = ({ name, description, paradigm, discipline, dateCreated, likes, username }) => (
+import { Link } from 'react-router-dom'
+
+const SoftwareItem = ({ _id, name, description, paradigm, discipline, dateCreated, likes, username }) => (
  <li style={{ padding: 40, paddingTop: 0 }}>
-  <h3>{name}</h3>
+  <Link to={`/software/${_id}`}><h3>{name}</h3></Link>
   <p>{description}</p>
   <p>{paradigm}</p>
   <p>{discipline}</p>
