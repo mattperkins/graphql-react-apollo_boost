@@ -1,6 +1,7 @@
 import React from 'react'
 import { Query } from 'react-apollo'
 import { GET_ALL_SOFTWARE } from '../queries'
+import SoftwareItem from './Software/SoftwareItem'
 
 const App = () => (
  <div>
@@ -16,16 +17,10 @@ const App = () => (
      <ul>
       {data.getAllSoftware.map(software =>
        (
-        <li style={{ padding: 40, paddingTop: 0 }}
-         key={software._id}>
-         <h3>{software.name}</h3>
-         <p>{software.description}</p>
-         <p>{software.paradigm}</p>
-         <p>{software.discipline}</p>
-         <p>{software.dateCreated}</p>
-         <p>{software.likes}</p>
-         <p>{software.username}</p>
-        </li>
+        <SoftwareItem
+         key={software._id}
+         {...software}
+        />
        )
       )}
      </ul>
