@@ -24,6 +24,7 @@ const SoftwarePage = ({ match }) => {
       <p><span>Date Created:</span> {dateCreated}</p>
       <p><span># of Likes:</span> {likes}</p>
       <p><span>Posted by:</span> {username}</p>
+      <button>Like</button>
      </div>
     )
    }}
