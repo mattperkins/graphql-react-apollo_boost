@@ -1,4 +1,5 @@
 # RUN
+## cd server && yarn / cd client && yarn
 ## yarn run dev (concurrently script)
 ## yarn run server
 ## yarn start
