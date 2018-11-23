@@ -1,6 +1,8 @@
 # RUN
-## cd server && yarn / cd client && yarn
-## yarn run dev (concurrently script)
+## cd client && yarn
+## cd server && yarn 
+## yarn run dev (concurrently script < server directory)
+### or
 ## yarn run server
 ## yarn start
 
